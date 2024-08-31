@@ -1,0 +1,13 @@
+<div>
+  <ul>
+    <li
+      *ngFor="let department of departmentLists"
+      (click)="showDepartmentDetails(department.id)"
+      [class.selected]="isSelected(department)"
+    >
+      {{ department.name }}
+    </li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>

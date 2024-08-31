@@ -1,0 +1,47 @@
+<p>binding-demo works!</p>
+
+<p>
+  <input #textBox value="hello" />
+</p>
+
+<p>
+  <button (click)="printOnConsole(textBox.value)">Go</button>
+</p>
+
+<p>{{ msgOnHTML }}</p>
+
+<br />
+
+If and not If :
+<p *ngIf="condition1">Good morning</p>
+
+<p *ngIf="!condition1">Good Night</p>
+
+<br />
+
+If else :
+<p *ngIf="condition2; else elseBlock">Good morning</p>
+
+<ng-template #elseBlock>Good night</ng-template>
+
+<br />
+
+If then else :
+<p *ngIf="condition3; then block1; else block2">Good morning</p>
+<ng-template #block1>Welcome</ng-template>
+<ng-template #block2>Bye</ng-template>
+
+<br />
+
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'RED'">RED</p>
+  <p *ngSwitchCase="'GREEN'">GREEN</p>
+  <p *ngSwitchCase="'BLUE'">BLUE</p>
+</div>
+
+<p>
+  Type msg to parent : <input type="text" #msgToParent />
+  <button (click)="sendMsgToParent(msgToParent.value)">Send</button>
+</p>
+
+<p *ngIf="msgSent">Parent is saying: "{{ msgFromParent }}"</p>

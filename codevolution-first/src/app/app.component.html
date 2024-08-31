@@ -1,0 +1,6 @@
+<app-binding-demo
+  (childEvent)="msgFromChild = $event"
+  [msgFromParent]="msgToChild"
+></app-binding-demo>
+
+<p>Child says : "{{ msgFromChild }}"</p>

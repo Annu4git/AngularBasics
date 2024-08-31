@@ -1,0 +1,14 @@
+<input type="text" [(ngModel)]="username" />
+<br />
+<br />
+
+<button (click)="getUserInfo()">Submit</button>
+
+<br />
+
+<div *ngIf="dataFetched">
+  <p>Username : {{ userLogin }}</p>
+  <p>Url : {{ url }}</p>
+  <p>Name : {{ name }}</p>
+  <p>Followers : {{ followers }}</p>
+</div>
